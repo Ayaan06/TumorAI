@@ -1,0 +1,5 @@
+.venv/
+image_sets/
+brain_tumor_dataset/
+__pycache__/
+*.pyc
