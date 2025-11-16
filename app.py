@@ -23,7 +23,7 @@ def build_transforms() -> transforms.Compose:
             transforms.Normalize(IMAGENET_MEAN, IMAGENET_STD),
         ]
     )
- 
+
 
 def load_model(path: str) -> Tuple[torch.nn.Module, list[str], torch.device]:
     if not os.path.isfile(path):
@@ -139,7 +139,7 @@ with gr.Blocks(
             "- Images are resized to 224x224 and normalized with ImageNet statistics.\n"
             "- A ResNet-18 backbone fine-tuned on four MRI tumor classes produces logits.\n"
             "- Outputs are softmax probabilities shown above.\n"
-            "- Everything runs on your local device; never rely on this for medical care."
+            "- Everything here is for learning only; never rely on it for medical care."
         )
 
 if __name__ == "__main__":

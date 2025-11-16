@@ -1,6 +1,6 @@
 # TumorAI - Brain Tumor Type Detection Demo (Not for Medical Use)
 
-This repository walks through an end-to-end workflow for fine-tuning a ResNet-18 classifier on the Kaggle brain tumor MRI dataset and serving predictions with Gradio. The pipeline is tested on Windows with an NVIDIA RTX 3060 using Python and PyTorch. **All predictions are strictly for educational/demo purposes and must never be used to make medical decisions.** A lightweight REST API is planned so others can interact with the model remotely—until then, follow the instructions below to run everything yourself.
+This repository walks through an end-to-end workflow for fine-tuning a ResNet-18 classifier on the Kaggle brain tumor MRI dataset and serving predictions with Gradio. The pipeline is tested on Windows with an NVIDIA RTX 3060 using Python and PyTorch. **All predictions are strictly for educational/demo purposes and must never be used to make medical decisions.** A lightweight REST API is planned so others can interact with the model remotely�until then, follow the instructions below to run everything yourself.
 
 ---
 
@@ -49,7 +49,7 @@ The training script relies on `torchvision.datasets.ImageFolder`, so keep the di
 Create and activate a project-specific virtual environment, then install dependencies (Torch build pinned to CUDA 12.1 for the RTX 3060):
 
 ```powershell
-cd C:\projects\TumorAI
+cd C:\projects\Tumor\TumorAI
 python -m venv .venv
 & ".\.venv\Scripts\Activate.ps1"
 pip install --upgrade pip
@@ -72,8 +72,8 @@ pip install pillow opencv-python gradio
 
 ### 4.2 Transforms
 
-- Training: resize 224x224 → random horizontal flip → random ±10° rotation → tensor conversion → normalize with ImageNet mean/std.
-- Validation: resize 224x224 → tensor → normalize with ImageNet mean/std.
+- Training: resize 224x224 ? random horizontal flip ? random �10� rotation ? tensor conversion ? normalize with ImageNet mean/std.
+- Validation: resize 224x224 ? tensor ? normalize with ImageNet mean/std.
 
 ### 4.3 Model Definition
 
@@ -161,7 +161,7 @@ python train_tumor_model.py
 python app.py
 ```
 
-Follow these steps from the project root (`C:\projects\TumorAI`) to reproduce the full workflow end-to-end.
+Follow these steps from the project root (`C:\projects\Tumor\TumorAI`) to reproduce the full workflow end-to-end.
 
 ---
 
